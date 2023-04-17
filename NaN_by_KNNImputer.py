@@ -2,6 +2,8 @@ import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.impute import KNNImputer
+import pandas as pd
+df = pd.read_csv('./hospital_deaths_train.csv')
 
 target = 'In-hospital_death'
 X = df.drop([target,'recordid'],axis=1)
